@@ -1,17 +1,17 @@
 # ML Assignment 2 – Breast Cancer Classification
 
 ## Problem Statement
-The objective of this assignment is to implement multiple machine learning classification models on a chosen dataset, evaluate their performance using standard metrics, and deploy an interactive Streamlit web application. The app allows users to upload test data, select models, and view evaluation results in real time.
+The aim of this assignment is to design, implement, and evaluate multiple machine learning classification models on a biomedical dataset. The task involves building an interactive Streamlit web application that allows users to upload test data, select models, and view evaluation metrics. The project demonstrates an end-to-end ML workflow: data preprocessing, model training, evaluation, UI development, and deployment on Streamlit Community Cloud.
 
 ## Dataset Description
-We used the **Breast Cancer Wisconsin (Diagnostic) dataset** from the UCI repository.  
-- **Instances:** 569 samples  
-- **Features:** 30 numeric features (e.g., mean radius, texture, concavity)  
-- **Target:** Binary classification (Malignant = 1, Benign = 0)  
-- The dataset is well-balanced and widely used for benchmarking classification models.
+We selected the **Breast Cancer Wisconsin (Diagnostic) dataset** from the UCI Machine Learning Repository.  
+- **Instances:** 569 patient records  
+- **Features:** 30 numeric attributes describing cell nuclei characteristics (e.g., radius, texture, concavity, symmetry)  
+- **Target Variable:** Binary classification — Malignant (1) vs. Benign (0)  
+- **Rationale:** The dataset is widely used for benchmarking classification algorithms, contains sufficient features (>12), and meets the minimum instance requirement (>500). Its balanced distribution ensures reliable evaluation across models.
 
-## Models Used
-The following six models were implemented:
+## Models Implemented
+Six classification models were trained and evaluated on the dataset:
 1. Logistic Regression  
 2. Decision Tree Classifier  
 3. K-Nearest Neighbor (kNN)  
@@ -19,7 +19,7 @@ The following six models were implemented:
 5. Random Forest (Ensemble)  
 6. XGBoost (Ensemble)
 
-## Performance Comparison Table
+## Performance Comparison
 
 | ML Model Name       | Accuracy | AUC    | Precision | Recall  | F1     | MCC    |
 |---------------------|----------|--------|-----------|---------|--------|--------|
@@ -34,15 +34,15 @@ The following six models were implemented:
 
 | ML Model Name       | Observation about model performance |
 |---------------------|--------------------------------------|
-| Logistic Regression | Achieved the highest accuracy and AUC; strong generalization and low overfitting. |
-| Decision Tree       | Lower accuracy compared to others; prone to variance, but precision remains high. |
-| kNN                 | Balanced performance with high recall; effective on this dataset. |
-| Naive Bayes         | Moderate accuracy but very strong AUC; simple and efficient baseline model. |
-| Random Forest       | Excellent performance, nearly matching Logistic Regression; robust ensemble method. |
-| XGBoost             | High recall and strong AUC; competitive with Random Forest, slightly better F1. |
+| Logistic Regression | Achieved the highest accuracy and AUC; excellent generalization and minimal overfitting. |
+| Decision Tree       | Lower accuracy compared to other models; prone to variance but maintains strong precision. |
+| kNN                 | Balanced performance with high recall; effective in capturing malignant cases. |
+| Naive Bayes         | Moderate accuracy but very strong AUC; efficient baseline model with simple assumptions. |
+| Random Forest       | Robust ensemble method; performance nearly matches Logistic Regression with strong stability. |
+| XGBoost             | High recall and competitive F1 score; slightly better than Random Forest in capturing malignant cases. |
 
 ## Live App
-The deployed Streamlit app can be accessed here:  
+The deployed Streamlit app is available here:  
 👉 [Click to open the app](https://2025aa05840mlassignment2-xhsnudkcp86vtdjoenhytf.streamlit.app/)
 
 ## Features of the Streamlit App
@@ -52,7 +52,15 @@ The deployed Streamlit app can be accessed here:
 - Confusion matrix visualization.  
 
 ## How to Run Locally
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-link>
-   cd project-folder
+To run the app on your local machine:
+
+```bash
+# Clone the repository
+git clone <your-repo-link>
+cd project-folder
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the Streamlit app
+streamlit run app.py
