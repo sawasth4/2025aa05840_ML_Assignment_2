@@ -41,9 +41,20 @@ Six classification models were trained and evaluated on the dataset:
 | Random Forest       | Robust ensemble method; performance nearly matches Logistic Regression with strong stability. |
 | XGBoost             | High recall and competitive F1 score; slightly better than Random Forest in capturing malignant cases. |
 
+## Down load Test Data Link
+
+👉 [Click to open the testdata](https://github.com/sawasth4/2025aa05840_ML_Assignment_2/blob/main/TestData/test_data.csv)
+
+
+👉 [Click to download option of git hub]
+<img width="55" height="56" alt="image" src="https://github.com/user-attachments/assets/1cdedca3-e16b-4019-904d-25d194bd6296" />
+
+
+
 ## Live App
 The deployed Streamlit app is available here:  
 👉 [Click to open the app](https://2025aa05840mlassignment2-xhsnudkcp86vtdjoenhytf.streamlit.app/)
+
 
 ## Features of the Streamlit App
 - CSV dataset upload option (test data only).  
